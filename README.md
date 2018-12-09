@@ -1,6 +1,6 @@
 ### Introduction
 
-Single master, single etcd, multiple nodes Kubernetes cluster setup, using Vagrant & Virtualbox.
+Single master, single etcd, multiple nodes Kubernetes cluster setup, using Vagrant, Virtualbox and kubeadm.
 
 Kubernetes version could be specified.
 
