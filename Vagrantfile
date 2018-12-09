@@ -81,6 +81,7 @@ deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 apt-get update
 # install kubernetes 1.12.3
+# get canonical versions: curl -s https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages | grep Version | awk '{print $2}'
 KUBE_VERSION=1.12.3-00
 apt-get install -y kubelet=$KUBE_VERSION kubectl=$KUBE_VERSION kubeadm=$KUBE_VERSION
 apt-mark hold kubelet kubeadm kubectl
