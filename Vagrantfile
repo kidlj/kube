@@ -132,6 +132,7 @@ SCRIPT
 $configureNode = <<-SCRIPT
 echo "This is worker"
 apt-get install -y sshpass
+# TODO: hard-coded master node ip
 sshpass -p "vagrant" scp -o StrictHostKeyChecking=no vagrant@192.168.200.10:/etc/kubeadm_join_cmd.sh .
 sh ./kubeadm_join_cmd.sh
 SCRIPT
