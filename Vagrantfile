@@ -90,7 +90,7 @@ apt-mark hold kubelet kubeadm kubectl
 swapoff -a
 
 # keep swap off after reboot
-# sadly, this won't work. you have to do this manually after provisioning.
+# TODO: sadly, this won't work. you have to do this manually after provisioning.
 sed -i '/ swap / s/^(.*)$/#\1/g' /etc/fstab
 
 # ip of this box
