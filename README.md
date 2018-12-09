@@ -24,7 +24,7 @@ or
 
 ### Bugs
 
-1. Auto swap off permanently doesn't work, you need to do it manually after each node provisiong, or kubelet won't start.
+1. Auto swap off permanently doesn't work, you need to do it manually after each node provisiong, or kubelet won't start after rebooting.
 2. Master node ip for node joining is hard-coded, you need to modify it carefully in Vagrantfile if necessary.
 
 ### Thanks
