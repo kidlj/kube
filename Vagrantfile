@@ -6,7 +6,7 @@ servers = [
         :name => "master",
         :type => "master",
         :box => "bento/ubuntu-16.04",
-        :eth1 => "192.168.200.10",
+        :eth1 => "172.16.200.10",
         :mem => "2048",
         :cpu => "2"
     },
@@ -14,31 +14,7 @@ servers = [
         :name => "node1",
         :type => "node",
         :box => "bento/ubuntu-16.04",
-        :eth1 => "192.168.200.11",
-        :mem => "2048",
-        :cpu => "2"
-    },
-    {
-        :name => "node2",
-        :type => "node",
-        :box => "bento/ubuntu-16.04",
-        :eth1 => "192.168.200.12",
-        :mem => "2048",
-        :cpu => "2"
-    },
-    {
-        :name => "node3",
-        :type => "node",
-        :box => "bento/ubuntu-16.04",
-        :eth1 => "192.168.200.13",
-        :mem => "2048",
-        :cpu => "2"
-    },
-    {
-        :name => "node4",
-        :type => "node",
-        :box => "bento/ubuntu-16.04",
-        :eth1 => "192.168.200.14",
+        :eth1 => "172.16.200.11",
         :mem => "2048",
         :cpu => "2"
     }
@@ -133,7 +109,7 @@ $configureNode = <<-SCRIPT
 echo "This is worker"
 apt-get install -y sshpass
 # TODO: hard-coded master node ip
-sshpass -p "vagrant" scp -o StrictHostKeyChecking=no vagrant@192.168.200.10:/etc/kubeadm_join_cmd.sh .
+sshpass -p "vagrant" scp -o StrictHostKeyChecking=no vagrant@172.16.200.10:/etc/kubeadm_join_cmd.sh .
 sh ./kubeadm_join_cmd.sh
 SCRIPT
 
